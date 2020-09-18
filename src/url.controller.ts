@@ -17,7 +17,7 @@ export default class URLController implements URLControllerInterface{
 	
 		var end: { url: any, found: boolean } = {url : null , found : true};
 		var url;
-
+ 
 		try {
 			url = await urlModel.findOne({name:name});
 		}
