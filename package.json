@@ -5,7 +5,7 @@
   "main": "index.entry.js",
   "scripts": {
     "compile": "tsc -p . --watch",
-    "start": "node /dist/index.entry.js",
+    "start": "node ./dist/index.entry.js",
     "dev": "nodemon ./dist/index.entry.js"
   },
   "keywords": [],
