@@ -41,6 +41,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
 var url_controller_1 = __importDefault(require("./url.controller"));
+var url_config_1 = __importDefault(require("./url.config"));
 var urlContoroller = new url_controller_1.default();
 // Init Application
 var app = express_1.default();
@@ -88,6 +89,4 @@ app.post('/post', function (request, response) { return __awaiter(void 0, void 0
         }
     });
 }); });
-// Init PORT
-// const PORT: number = process.env.PORT || 8000; 
-app.listen(8000);
+app.listen(url_config_1.default.PORT);

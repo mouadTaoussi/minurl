@@ -41,7 +41,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var mongoose_1 = require("mongoose");
 var url_model_1 = __importDefault(require("./url.model"));
-mongoose_1.connect('mongodb://localhost:27017/minurl', function (err) {
+var url_config_1 = __importDefault(require("./url.config"));
+mongoose_1.connect(url_config_1.default.database_connection, function (err) {
     if (err)
         throw err;
     console.log("Database up and running!!!");

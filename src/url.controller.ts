@@ -1,7 +1,8 @@
 import { connect } from 'mongoose';
 import urlModel from './url.model';
+import config from './url.config';
 
-connect('mongodb://localhost:27017/minurl',(err)=>{
+connect(config.database_connection,(err)=>{
 	if (err) throw err;
 	console.log("Database up and running!!!")
 })

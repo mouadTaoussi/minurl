@@ -2,6 +2,7 @@ import express, { Application,Request,Response,NextFunction } from 'express';
 import bodyParser from 'body-parser';
 import URLController from "./url.controller";
 import * as cors from 'cors';
+import config from './url.config';
 
 const urlContoroller = new URLController();
 
@@ -47,8 +48,6 @@ app.post('/post',async (request:Request,response:Response)=>{
 	response.send(saving);
 })
 
-// Init PORT
-// const PORT: number = process.env.PORT || 8000; 
-app.listen(8000);
+app.listen(config.PORT);
 
 
