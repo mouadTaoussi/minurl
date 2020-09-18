@@ -1,0 +1,23 @@
+body {
+	background: black;
+	color: white;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 50px 0 0 0;
+}
+
+.inputs_area,.output_area {
+	margin: 0 auto;
+	width:  50%;
+}
+.input {
+	background-color: black;
+	color : white;
+	border-radius: 0px;
+}
+.submit_btn {
+	background-color: red;
+	width: 100%;
+	color: white;
+	border-radius: 0px;
+}
