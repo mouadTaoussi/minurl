@@ -25,7 +25,7 @@ document.querySelector('.submit_btn').addEventListener('click',async()=>{
 			document.querySelector('.errors').innerText = json_response.message;
 		}
 		else{
-			document.querySelector('#shorteren').value = "localhost:8000/"+ name;
+			document.querySelector('#shorteren').value = "https://minurl1.herokuapp.com/"+ name;
 		}
 	}
 })

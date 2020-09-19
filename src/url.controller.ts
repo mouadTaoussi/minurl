@@ -13,6 +13,7 @@ interface URLControllerInterface {
 }
 
 export default class URLController implements URLControllerInterface{
+
 	public async getUrl(name: any){
 	
 		var end: { url: any, found: boolean } = {url : null , found : true};
@@ -39,6 +40,7 @@ export default class URLController implements URLControllerInterface{
 
 		return end;
 	}
+
 	public async postUrl(name: any,url: string){
 		
 		var end: { posted: boolean, message: string } = { posted : true, message : '' };
@@ -68,10 +70,8 @@ export default class URLController implements URLControllerInterface{
 		catch(err){
 			end.posted = false;
 			end.message = "Something went wrong!";
-		}
-
-		
-
+		}		
 		return end;
 	}
+	
 }

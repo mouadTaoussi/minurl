@@ -18,8 +18,7 @@ app.use(express.json());
 // app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(function(request:Request,response:Response,next:NextFunction){
-	console.log("Heelo")
-	response.header("Access-Control-Allow-Origin", 'http://localhost:8000');
+	response.header("Access-Control-Allow-Origin", '*');
 	response.header("Access-Control-Allow-Credentials", true);
 	response.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
 	response.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type');
@@ -40,7 +39,6 @@ app.get('/:name',async (request:Request,response:Response)=>{
 app.post('/post',async (request:Request,response:Response)=>{
 	// get body data
 	const { name, url } = request.body;
-	console.log(request.body)
 	
 	// Saving
 	const saving = await urlContoroller.postUrl(name,url);

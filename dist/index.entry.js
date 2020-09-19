@@ -52,8 +52,7 @@ app.use(express_1.default.json());
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: false }))
 app.use(function (request, response, next) {
-    console.log("Heelo");
-    response.header("Access-Control-Allow-Origin", 'http://localhost:8000');
+    response.header("Access-Control-Allow-Origin", '*');
     response.header("Access-Control-Allow-Credentials", true);
     response.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
     response.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type');
@@ -80,7 +79,6 @@ app.post('/post', function (request, response) { return __awaiter(void 0, void 0
         switch (_b.label) {
             case 0:
                 _a = request.body, name = _a.name, url = _a.url;
-                console.log(request.body);
                 return [4 /*yield*/, urlContoroller.postUrl(name, url)];
             case 1:
                 saving = _b.sent();
