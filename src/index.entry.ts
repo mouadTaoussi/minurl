@@ -13,7 +13,7 @@ const app:Application = express();
 app.use(express.static('Public'));
 
 // Init json 
-app.use(express.json());
+app.use(express.json()); 
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: false }))
 

@@ -73,5 +73,5 @@ export default class URLController implements URLControllerInterface{
 		}		
 		return end;
 	}
-	
+
 }
