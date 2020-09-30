@@ -3,50 +3,64 @@
 <head>
 	<title>MinUrl</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
-	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="./index.css">
 	<!-- CSS only -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+	<!-- Venus -->
+	<link rel="stylesheet" type="text/css" href="venus-ui/src/main.css">
+	<link rel="icon" type="image/png" href="./logo.png">
 </head>
-<body>
+<body class="poppins light">
 	<center>
-		<h1 class="title">Min<strong class='sub_title'>Url</strong></h1>		
+		<img src='./logoLight.svg' class="local-py-8 logo"></center>
 	</center>
 
-	<div class="inputs_area">																
-		<input class="form-control m-2" type="text" id="name" name="name" placeholder="Enter a name of your Url">
-		<input class="form-control m-2" type="text" id="url" name="url"  placeholder="Enter a Url">
-		<p class="errors m-2"></p>
-		<button class="btn submit_btn btn-md m-2">Short it!</button>
+	<div class="local-card shadow local-p-4 local-my-4">
+		<h1 class="local-text-dark local-text-left local-my-4">Paste a Long link!</h1>
+																	
+			<input 
+				class="form-control local-input local-my-2" 
+				type="text" 
+				id="name" 
+				name="name" 
+				placeholder="Enter a name of your Url" 
+				autofocus
+			>
+			<input 
+				class="form-control local-input local-my-2" 
+				type="text" 
+				id="url" 
+				name="url"  
+				placeholder="Enter a Url"
+			>
+			<p class="errors local-my-2"></p>
+			<button class="local-btn local-btn-danger submit_btn local-my-2">Short it!</button>
+		
+			<h6 class="local-text-left local-text-dark local-my-2">Your shortren link!</h6>
+			<input class="form-control local-input local-my-2" type="text" id="shorteren" name="name" disabled value="">
+	
 	</div>
 
-	<div class="output_area">
-		<h6 class="m-2">Your shortren link!</h6>
-		<input class="form-control m-2" type="text" id="shorteren" name="name" disabled value="">
+	<!-- SVG AREA -->
+	<div class="grid-svg">
+		<div class="svg-two"></div>
+		<div class="svg-one"></div>
 	</div>
 	<style>
-		body {
-		background: black;
-		color: white;
-		box-sizing: border-box;
-		margin: 0;
-		padding: 50px 0 0 0;
-	}
+		.local-card {
+			margin: 0 auto;
+			width:  30%;
+		}
+		@media only screen and (max-width: 800px){
+			.local-card {
+				margin: 0 auto;
+				width:  99%;
+			}
+			.grid-svg {
+				display: none;
 
-	.inputs_area,.output_area {
-		margin: 0 auto;
-		width:  50%;
-	}
-	.input {
-		background-color: black;
-		color : white;
-		border-radius: 0px;
-	}
-	.submit_btn {
-		background-color: red;
-		width: 100%;
-		color: white;
-		border-radius: 0px;
-	}
+			}
+		}
 	</style>
 </body>
 <script type="text/javascript" src="index.js"></script>
