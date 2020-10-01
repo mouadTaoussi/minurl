@@ -24,13 +24,13 @@ body {
 	display: grid;
 	grid-template-columns: 2fr 2fr;
 	height: 200px;
+	width: 100%;
 	grid-gap: 20px;
 	position: fixed;
 	z-index: -1;
 	/*position: absolute;*/
 	/*bottom: 120px;*/
 	margin-top: -250px;
-	/*justify-items: center;*/
 }
 .grid-svg div {
 	height: 500px;
