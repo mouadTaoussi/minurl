@@ -25,9 +25,11 @@ body {
 	grid-template-columns: 2fr 2fr;
 	height: 200px;
 	grid-gap: 20px;
-	/*position: fixed;*/
-	position: absolute;
-	bottom: 120px;
+	position: fixed;
+	z-index: -1;
+	/*position: absolute;*/
+	/*bottom: 120px;*/
+	margin-top: -250px;
 	/*justify-items: center;*/
 }
 .grid-svg div {
@@ -40,7 +42,7 @@ body {
 	background-position: center;
 	background-size: cover;
 	width: 600px;
-	height: 100px;
+	/*height: 100px;*/
 }
 .svg-two {
 	background-image: url('./undraw_unlock_24mb.svg');
@@ -48,5 +50,5 @@ body {
 	background-position: center;
 	background-size: cover;
 	width: 600px;
-	height: 100px;
+	/*height: 100px;*/
 }
